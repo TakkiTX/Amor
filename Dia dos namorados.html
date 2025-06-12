@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Declaração Romântica</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      padding: 40px 0;
+      font-family: 'Great Vibes', cursive;
+      background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+      color: #111;
+      min-height: 100vh;
+      text-align: center;
+      overflow-y: auto;
+      scroll-behavior: smooth;
+      position: relative;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 20px;
+      padding: 40px;
+      margin: 0 auto;
+      max-width: 700px;
+      box-shadow: 0 8px 32px rgba(31, 38, 135, 0.3);
+      position: relative;
+      z-index: 2;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 1.6;
+    }
+
+    button {
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 30px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ff1493;
+    }
+
+    .hearts {
+      margin-top: 15px;
+      font-size: 24px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    /* Poema */
+    .poema {
+      background-color: rgba(255, 255, 255, 0.95);
+      color: #111;
+      border-radius: 15px;
+      padding: 25px;
+      margin-top: 40px;
+      animation: fadeIn 2s ease-in-out;
+      font-family: 'Georgia', serif;
+      text-align: left;
+    }
+
+    .poema h2 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #e91e63;
+      animation: floatTitle 3s infinite ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes floatTitle {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-6px); }
+    }
+
+    /* Scrollbar personalizada */
+    body::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    body::-webkit-scrollbar-track {
+      background: #fbc2eb;
+    }
+
+    body::-webkit-scrollbar-thumb {
+      background-color: #ff69b4;
+      border-radius: 10px;
+      border: 2px solid #fbc2eb;
+    }
+
+    body {
+      scrollbar-width: thin;
+      scrollbar-color: #ff69b4 #fbc2eb;
+    }
+
+    /* Floating hearts */
+    .floating-heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      transform: rotate(45deg);
+      animation: floatUp 10s linear infinite;
+      opacity: 0.3;
+      pointer-events: none;
+    }
+
+    .floating-heart::before,
+    .floating-heart::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      border-radius: 50%;
+    }
+
+    .floating-heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .floating-heart::after {
+      left: -10px;
+      top: 0;
+    }
+
+    @keyframes floatUp {
+      0% {
+        bottom: 0;
+        transform: translateX(0) scale(1) rotate(45deg);
+        opacity: 0.4;
+      }
+      100% {
+        bottom: 100vh;
+        transform: translateX(100px) scale(1.5) rotate(45deg);
+        opacity: 0;
+      }
+    }
+	.spotify-embed {
+  margin-top: 25px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  overflow: hidden;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1> 💖 Para o Amor da Minha Vida 💖</h1>
+    <p>
+      Hoje é só mais um motivo para te lembrar o quanto eu te amo.<br />
+      Cada momento contigo é um presente, cada sorriso seu é a minha paz.<br />
+      Mesmo de longe, meu coração está com você. Feliz Dia dos Namorados! 
+    </p>
+    <div class="hearts">❤️ 💕 💗 💞 💘</div>
+
+    <button id="playBtn">Tocar Música 💕</button>
+	<div class="spotify-embed">
+  <iframe style="border-radius:12px" 
+    src="https://open.spotify.com/embed/playlist/6aJ45rseQyo34XcNXlMOR8?utm_source=generator" 
+    width="100%" 
+    height="152" 
+    frameborder="0" 
+    allowfullscreen="" 
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+    loading="lazy">
+  </iframe>
+</div>
+
+    <div class="poema">
+      <h2>💌Nos Teus Olhos, o Meu Lar💌</h2>
+      <p>No silêncio dos teus olhos encontrei<br>
+      a paz que nunca soube existir.<br>
+      黒い髪、夜の静けさのように美しい。<br>
+      <em>(Kuroi kami, yoru no shizukesa no yō ni utsukushii — Teus cabelos negros são belos como a noite serena.)</em></p>
+
+      <p>Teu sorriso...<br>
+      É como um nascer do sol só meu,<br>
+      que aquece o peito mesmo nos dias frios.</p>
+
+      <p>君の笑顔は、私の世界を明るくする光。<br>
+      <em>(Kimi no egao wa, watashi no sekai o akaruku suru hikari — Teu sorriso é a luz que ilumina meu mundo.)</em></p>
+
+      <p>Você é o amor que nunca imaginei merecer,<br>
+      e mesmo assim, a vida me trouxe você.<br>
+      優しさと理解で包んでくれる人。<br>
+      <em>(Yasashisa to rikai de tsutsunde kureru hito — Alguém que me envolve com gentileza e compreensão.)</em></p>
+
+      <p>Quero estar contigo, hoje e sempre.<br>
+      ずっと一緒にいたい。<br>
+      <em>(Zutto issho ni itai — Quero estar com você para sempre.)</em></p>
+    </div>
+  </div>
+
+  <div id="player"></div>
+
+  <script>
+    // Corações flutuantes
+    for (let i = 0; i < 30; i++) {
+      const heart = document.createElement('div');
+      heart.classList.add('floating-heart');
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDelay = (Math.random() * 10) + 's';
+      heart.style.animationDuration = (5 + Math.random() * 10) + 's';
+      document.body.appendChild(heart);
+    }
+
+    // API do YouTube
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    document.body.appendChild(tag);
+
+    var player;
+    var currentSongIndex = 0;
+
+    const songs = [
+      { id: 'aX9pu5G3nLk', title: 'Plastic Love – Mariya Takeuchi' },
+      { id: '9aofoBrFNdg', title: 'Koi – Gen Hoshino' },
+      { id: '5JS-96R1b1c', title: 'Sakura – Ikimonogakari' },
+      { id: 'KJwYBJMSbPI', title: 'Love So Sweet – Arashi' },
+      { id: 'uRCBfvDoa5c', title: 'Soba ni Iru Yo – Uru' }
+    ];
+
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        height: '0',
+        width: '0',
+        videoId: songs[currentSongIndex].id,
+        playerVars: {
+          autoplay: 0,
+          controls: 0,
+          modestbranding: 1,
+          loop: 1
+        },
+        events: {
+          'onReady': onPlayerReady
+        }
+      });
+    }
+
+    function onPlayerReady(event) {
+      const btn = document.getElementById('playBtn');
+      let playing = false;
+      btn.onclick = function () {
+        if (playing) {
+          player.pauseVideo();
+          btn.textContent = 'Tocar Música 💕';
+        } else {
+          player.playVideo();
+          btn.textContent = 'Pausar Música 💖';
+        }
+        playing = !playing;
+      };
+    }
+  </script>
+</body>
+</html>
